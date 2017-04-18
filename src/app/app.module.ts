@@ -12,6 +12,7 @@ import { ListComponent } from './components/book/list/list.component';
 import { DetailsComponent } from './components/book/details/details.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
   {
@@ -20,13 +21,16 @@ const routes: Routes = [
     "pathMatch": "full"
   }, {
     "path": "home",
-    "component": HomeComponent,
+    "component": HomeComponent
   }, {
     "path": "book/list",
-    "component": ListComponent,
+    "component": ListComponent
   }, {
     "path": "book/details/:id",
-    "component": DetailsComponent,
+    "component": DetailsComponent
+  }, {
+    "path": "cart",
+    "component": ShoppingCartComponent
   }, {
     "path": "about",
     "component": AboutComponent
@@ -41,7 +45,8 @@ const routes: Routes = [
     ListComponent,
     DetailsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
