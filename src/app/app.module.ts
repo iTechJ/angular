@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from "@angular/router";
 import { HashLocationStrategy, LocationStrategy, APP_BASE_HREF } from "@angular/common";
@@ -13,6 +13,8 @@ import { DetailsComponent } from './components/book/details/details.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { BookComponent } from './components/book/book/book.component';
+import { CartFormComponent } from './components/shopping-cart/cart-form/cart-form.component';
 
 const routes: Routes = [
   {
@@ -46,11 +48,14 @@ const routes: Routes = [
     DetailsComponent,
     HeaderComponent,
     FooterComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    BookComponent,
+    CartFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(routes)
   ],
