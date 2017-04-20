@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { BookComponent } from './components/book/book/book.component';
 import { CartFormComponent } from './components/shopping-cart/cart-form/cart-form.component';
+import {bookServiceInjectables} from "./components/book/book-service-injectables";
 
 const routes: Routes = [
   {
@@ -61,7 +62,8 @@ const routes: Routes = [
   ],
   providers: [
     {"provide": APP_BASE_HREF, "useValue": "/"},
-    {"provide": LocationStrategy, "useClass": HashLocationStrategy}
+    {"provide": LocationStrategy, "useClass": HashLocationStrategy},
+    bookServiceInjectables
   ],
   bootstrap: [AppComponent]
 })
