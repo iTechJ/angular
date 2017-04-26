@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Book} from "../book";
 import {BookService} from "../book-service.service";
+import {Router, ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-list',
@@ -10,7 +11,15 @@ import {BookService} from "../book-service.service";
 export class ListComponent implements OnInit {
   books: Book[];
 
-  constructor(private bookService: BookService) {
+  constructor(private bookService: BookService,
+              private router: Router,
+              private route: ActivatedRoute) {
+  }
+
+  goToBook(sku: String): void {
+    this.router.navigate(['../details', sku], {
+      relativeTo: this.route
+    });
   }
 
   ngOnInit() {
@@ -22,16 +31,6 @@ export class ListComponent implements OnInit {
         console.log(err);
       }
     );
-
-    // this.bookService.search().subscribe(
-    //   (result: Response) => {
-    //     // let body = result._body.json();
-    //     debugger;
-    //   },
-    //   (err: any) => {
-    //     console.log(err);
-    //   }
-    // )
   }
 
 }
