@@ -1,8 +1,7 @@
 <h1>Catalog</h1>
 <hr>
-<app-book
+<list-item
   *ngFor="let book of books"
   [book]="book"
   (click)="goToBook(book.sku)">
-</app-book>
-
+</list-item>

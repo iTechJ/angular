@@ -12,7 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { CartFormComponent } from './components/shopping-cart/cart-form/cart-form.component';
 import { bookServiceInjectables } from "./components/book/book-service-injectables";
-import { BookModule, routes as bookRoutes } from "./components/book/book/book.module";
+import { BookModule, routes as bookRoutes } from "./components/book/book.module";
 import { BookContainerComponent } from './components/book/book-container/book-container.component';
 
 const routes: Routes = [
