@@ -6,10 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-container.component.scss']
 })
 export class BookContainerComponent implements OnInit {
-
-  constructor() { }
-
   ngOnInit() {
   }
-
 }
