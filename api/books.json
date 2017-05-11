@@ -1,92 +1,92 @@
 [
   {
     "sku": "book_1",
-    "name": "name1",
-    "author": "author1",
-    "price": 1
+    "name": "Harry Potter and the Chamber of Secrets",
+    "author": "J.K. Rowling",
+    "price": "$24.38"
   },
   {
     "sku": "book_2",
-    "name": "name2",
-    "author": "author2",
-    "price": 1
+    "name": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "price": "$23.99"
   },
   {
     "sku": "book_3",
-    "name": "name3",
-    "author": "author3",
-    "price": 1
+    "name": "The Going-To-Bed Book",
+    "author": "Sandra Boynton",
+    "price": "$2.99"
   },
   {
     "sku": "book_4",
-    "name": "name1",
-    "author": "author1",
-    "price": 1
+    "name": "Harry Potter and the Prisoner of Azkaban",
+    "author": "J.K. Rowling",
+    "price": "$22.72"
   },
   {
     "sku": "book_5",
-    "name": "name2",
-    "author": "author2",
-    "price": 1
+    "name": "Goodnight Moon",
+    "author": "Margaret Wise Brown",
+    "price": "$4.49"
   },
   {
     "sku": "book_6",
-    "name": "name3",
-    "author": "author3",
-    "price": 1
+    "name": "The Wonderful Things You Will Be",
+    "author": "Emily Winfield Martin",
+    "price": "$11.00"
   },
   {
     "sku": "book_7",
-    "name": "name1",
-    "author": "author1",
-    "price": 1
+    "name": "If Animals Kissed Good Night",
+    "author": "Ann Whitford Paul",
+    "price": "$5.75"
   },
   {
     "sku": "book_8",
-    "name": "name2",
-    "author": "author2",
-    "price": 1
+    "name": "Baby Touch and Feel: Animals",
+    "author": "DK",
+    "price": "$4.84"
   },
   {
     "sku": "book_9",
-    "name": "name3",
-    "author": "author3",
-    "price": 1
+    "name": "Baby Signs: A Baby-Sized Introduction to Speaking with Sign Language",
+    "author": "Joy Allen",
+    "price": "$4.08"
   },
   {
     "sku": "book_10",
-    "name": "name1",
-    "author": "author1",
-    "price": 1
+    "name": "Dragons Love Tacos",
+    "author": "Adam Rubin",
+    "price": "$11.21"
   },
   {
     "sku": "book_11",
-    "name": "name2",
-    "author": "author2",
-    "price": 1
+    "name": "Harry Potter and the Cursed Child",
+    "author": "J.K. Rowling",
+    "price": "$13.03"
   },
   {
     "sku": "book_12",
-    "name": "name2",
-    "author": "author2",
-    "price": 1
+    "name": "The Inquisitor's Tale: Or, The Three Magical Children and Their Holy Dog",
+    "author": "Adam Gidwitz",
+    "price": "$10.97"
   },
   {
     "sku": "book_13",
-    "name": "name3",
-    "author": "author3",
-    "price": 1
+    "name": "The Girl Who Drank the Moon",
+    "author": "Kelly Barnhill",
+    "price": "$10.54"
   },
   {
     "sku": "book_14",
-    "name": "name2",
-    "author": "author2",
-    "price": 1
+    "name": "Oh, The Places You'll Go!",
+    "author": "Dr. Seuss",
+    "price": "$11.39"
   },
   {
     "sku": "book_15",
-    "name": "name3",
-    "author": "author3",
-    "price": 1
+    "name": "The Monster at the End of This Book",
+    "author": "Jon Stone",
+    "price": "$3.50"
   }
 ]

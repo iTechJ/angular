@@ -4,8 +4,11 @@ export class Book {
     public name: string,
     public author: string,
     public description: string,
-    public price: number
+    public price: string
   ) {
+  }
 
+  imageSrc(): string {
+    return `/api/book/image/${this.sku}.jpg`;
   }
 }

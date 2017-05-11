@@ -1,8 +1,7 @@
 {
-  "sku": "book_12",
-  "name": "name2",
-  "author": "author2",
-  "description": "",
-  "image": "",
-  "price": 1
+  "sku": "book_14",
+  "name": "Oh, The Places You'll Go!",
+  "author": "Dr. Seuss",
+  "description": "Dr. Seuss’s wonderfully wise Oh, the Places You’ll Go! is the perfect send-off for grads—from nursery school, high school, college, and beyond! From soaring to high heights and seeing great sights to being left in a Lurch on a prickle-ly perch, Dr. Seuss addresses life’s ups and downs with his trademark humorous verse and illustrations, while encouraging readers to find the success that lies within. In a starred review, Booklist notes, “Seuss’s message is simple but never sappy: life may be a ‘Great Balancing Act,’ but through it all ‘There’s fun to be done.’” A perennial favorite and a perfect gift for anyone starting a new phase in their life!",
+  "price": "$11.39"
 }
