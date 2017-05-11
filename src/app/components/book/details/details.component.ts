@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {BookService} from "../book-service.service";
 import {Book} from "../book";
@@ -16,7 +16,9 @@ export class DetailsComponent implements OnInit {
   constructor(private bookService: BookService,
               private router: Router,
               private route: ActivatedRoute) {
-    route.params.subscribe(params => { this.sku = params['id']; });
+    route.params.subscribe(params => {
+      this.sku = params['id'];
+    });
   }
 
   goToBook(sku: String): void {
