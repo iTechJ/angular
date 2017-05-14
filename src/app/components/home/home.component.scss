@@ -1,0 +1,8 @@
+.orbit-container { height: 250px; }  /* Set to height of slides */
+
+.orbit-container .orbit-slides-container > * {
+  position: relative;
+  margin-left: 0;
+  float: left;
+  height: 100%;
+}

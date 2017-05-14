@@ -15,6 +15,8 @@ import { bookServiceInjectables } from "./components/book/book-service-injectabl
 import { BookModule, routes as bookRoutes } from "./components/book/book.module";
 import { BookContainerComponent } from './components/book/book-container/book-container.component';
 import {ShoppingCartService} from "./components/shopping-cart/shopping-cart.service";
+import { CartItemListComponent } from './components/shopping-cart/cart-item-list/cart-item-list.component';
+import { CartItemComponent } from './components/shopping-cart/cart-item-list/cart-item/cart-item.component';
 
 const routes: Routes = [
   {
@@ -47,7 +49,9 @@ const routes: Routes = [
     FooterComponent,
     ShoppingCartComponent,
     CartFormComponent,
-    BookContainerComponent
+    BookContainerComponent,
+    CartItemListComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
