@@ -1,12 +1,29 @@
-<h1>{{book.name}}</h1>
-<div class="book-author">{{book.author}}</div>
-<div class="container">
-  <div class="row">
-    <div class="small-12 medium-6 columns">
-
+<div *ngIf="book">
+  <div class="container">
+    <div class="row">
+      <div class="small-12 medium-6 columns">
+        <img [attr.src]="book.imageSrc()" alt="" src=""/>
+      </div>
+      <div class="small-12 medium-6 columns">
+        <h1 class="header">{{book.name}}</h1>
+        <div class="book-author">{{book.author}}</div>
+        <div class="book-description">{{book.description}}</div>
+        <div class="book-price">price: {{book.price}}</div>
+      </div>
     </div>
-    <div class="small-12 medium-6 columns">
-
+    <div class="row">
+      <div class="small-12 medium-6 columns">
+        <button class="button expanded secondary"
+                (click)="goToList()">Back to List
+        </button>
+      </div>
+      <div class="small-12 medium-6 columns">
+        <button class="button expanded"
+                (click)="addToCart()">
+          Add To Cart
+        </button>
+      </div>
     </div>
   </div>
 </div>
+

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {BookService} from "../book-service.service";
 import {Book} from "../book";
+import {ShoppingCartService} from "../../shopping-cart/shopping-cart.service";
 
 @Component({
   selector: 'app-details',
@@ -14,6 +15,7 @@ export class DetailsComponent implements OnInit {
   book: Book;
 
   constructor(private bookService: BookService,
+              private shoppingCartService: ShoppingCartService,
               private router: Router,
               private route: ActivatedRoute) {
     route.params.subscribe(params => {
@@ -21,20 +23,24 @@ export class DetailsComponent implements OnInit {
     });
   }
 
-  goToBook(sku: String): void {
-    this.router.navigate(['../list'], {
+  goToList(): void {
+    this.router.navigate(['../../list'], {
       relativeTo: this.route
     });
+  }
+
+  addToCart(): void {
+    this.shoppingCartService.addToCart(this.book);
+    this.goToList();
   }
 
   ngOnInit() {
     this.bookService.get(this.sku).subscribe(
       (book: Book) => {
-        console.log(book);
         this.book = book;
       },
       (err: any) => {
-        console.log(err);
+        console.error(err);
       }
     );
 

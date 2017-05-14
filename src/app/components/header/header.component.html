@@ -19,9 +19,15 @@
 
   <ul class="navigation-bar">
     <li>
-      <a [routerLink]="['/cart']" [routerLinkActive]="['active']">
-        <span>Shopping Cart</span>
-        <span>{{cartItems}}</span>
+      <a [routerLink]="['/cart']"
+         [routerLinkActive]="['active']"
+         class="shopping-cart">
+        <span>
+          <span class="show-for-medium">
+            Shopping
+          </span> Cart
+        </span>
+        <span class="cart-count">{{cartItems}}</span>
       </a>
     </li>
     <li>

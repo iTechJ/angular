@@ -47,3 +47,21 @@ header {
     }
   }
 }
+
+.shopping-cart {
+  position: relative;
+  .cart-count {
+    position: absolute;
+    height: 20px;
+    background-color: #1095C2;
+    width: 20px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    top: 40px;
+    right: 10px;
+    line-height: 1.4rem;
+    border-radius: 10px;
+  }
+}
+

@@ -34,7 +34,7 @@ export class ListComponent implements OnInit {
         this.books = books;
       },
       (err: any) => {
-        console.log(err);
+        console.error(err);
       }
     );
   }
