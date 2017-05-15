@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {Subject} from "rxjs";
 import {Book} from "../book/book";
 
-
 @Injectable()
 export class ShoppingCartService {
   private books: Book[];
@@ -21,6 +20,14 @@ export class ShoppingCartService {
 
   list(): Book[] {
     return this.books;
+  }
+
+  remove(book: Book): void {
+    let index: number = this.books.indexOf(book);
+    if (index !== -1) {
+      this.books.splice(index, 1);
+    }
+    this.cartItemsSource.next(this.books);
   }
 
   checkout(): void {

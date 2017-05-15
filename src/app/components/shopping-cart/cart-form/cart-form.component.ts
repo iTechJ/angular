@@ -40,10 +40,12 @@ export class CartFormComponent implements OnInit {
   onSubmit(cartForm: FormGroup): void {
     cartForm.reset();
     this.shoppingCartService.checkout();
+    this.books = this.shoppingCartService.list();
   }
 
   bookWasDeleted(book: Book): void {
-    console.log(book);
+    this.shoppingCartService.remove(book);
+    // this.books = this.shoppingCartService.list();
   }
 }
 

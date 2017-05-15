@@ -1,0 +1,17 @@
+.cart-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.cart-item-name {
+  flex: 1 1 auto;
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #1095C2;
+}
+
+.close-button {
+  flex: 0 0 20px;
+  position: relative;
+  outline: none;
+}

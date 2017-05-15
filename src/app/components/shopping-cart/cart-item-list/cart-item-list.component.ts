@@ -11,7 +11,9 @@ export class CartItemListComponent implements OnInit {
   @Input() books: Book[];
   @Output() onBookDeleted: EventEmitter<Book>;
 
-  constructor() { }
+  constructor() {
+    this.onBookDeleted = new EventEmitter();
+  }
 
   ngOnInit() {
   }
