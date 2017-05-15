@@ -1,7 +1,9 @@
 <form [formGroup]="cartForm"
       (ngSubmit)="onSubmit(cartForm)">
 
-  <cart-item-list></cart-item-list>
+  <cart-item-list
+    (onBookDeleted)="bookWasDeleted($event)">
+    [books]="books"></cart-item-list>
 
   <div class="field">
     <label for="cardType">Card Type</label>

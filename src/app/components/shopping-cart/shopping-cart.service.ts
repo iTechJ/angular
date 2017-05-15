@@ -14,12 +14,16 @@ export class ShoppingCartService {
     this.books = [];
   }
 
-  addToCart(book: Book) {
+  addToCart(book: Book): void {
     this.books.push(book);
     this.cartItemsSource.next(this.books);
   }
 
-  checkout() {
+  list(): Book[] {
+    return this.books;
+  }
+
+  checkout(): void {
     this.books = [];
     this.cartItemsSource.next(this.books);
   }

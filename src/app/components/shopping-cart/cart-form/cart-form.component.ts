@@ -5,6 +5,7 @@ import {
   Validators,
 } from '@angular/forms';
 import {ShoppingCartService} from "../shopping-cart.service";
+import {Book} from "../../book/book";
 
 @Component({
   selector: 'app-cart-form',
@@ -13,6 +14,7 @@ import {ShoppingCartService} from "../shopping-cart.service";
 })
 export class CartFormComponent implements OnInit {
   cartForm: FormGroup;
+  books: Book[];
 
   ngOnInit() {
   }
@@ -31,11 +33,17 @@ export class CartFormComponent implements OnInit {
       "cardNo": ['', Validators.compose([Validators.required])],
       "fullName": ['', Validators.compose([Validators.required, Validators.pattern(/^[a-zA-Zа-яА-Я\s]*$/)])]
     }, {validator: cardValidator});
+
+    this.books = shoppingCartService.list();
   }
 
   onSubmit(cartForm: FormGroup): void {
     cartForm.reset();
     this.shoppingCartService.checkout();
+  }
+
+  bookWasDeleted(book: Book): void {
+    console.log(book);
   }
 }
 
