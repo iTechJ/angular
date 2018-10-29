@@ -1,0 +1,10 @@
+<div class="cart-item" *ngFor="let book of books">
+  <div class="cart-item-name">{{book.name}}</div>
+
+  <button class="close-button"
+          type="button"
+          (click)="deleted(book)">
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+</div>

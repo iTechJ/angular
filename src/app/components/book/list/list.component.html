@@ -1,0 +1,15 @@
+<h1>Catalog</h1>
+<div class="book-list">
+  <div *ngFor="let book of books" class="list-item">
+    <list-item
+      class="item-content"
+      [book]="book"
+      (click)="goToBook(book.sku)">
+    </list-item>
+
+    <button (click)="addToCart(book)"
+            class="add-to-cart button small">
+      add to cart
+    </button>
+  </div>
+</div>

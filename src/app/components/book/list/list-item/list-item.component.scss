@@ -1,0 +1,21 @@
+@import "../../../../../_variables";
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.3rem;
+  text-align: center;
+  flex: 1 1 auto;
+}
+
+img {
+  margin: 0.5rem 0;
+  flex: 1 1 auto;
+}
+
+.item-price {
+  font-weight: bold;
+  color: $price-color;
+}
+
+

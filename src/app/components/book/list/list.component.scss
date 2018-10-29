@@ -1,0 +1,30 @@
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list-item {
+  margin: 1rem;
+  padding: 0 1rem;
+  flex: 0 1 260px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #717171;
+  cursor: pointer;
+
+  .item-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.add-to-cart {
+  flex: 0 0 auto;
+  cursor: pointer;
+}

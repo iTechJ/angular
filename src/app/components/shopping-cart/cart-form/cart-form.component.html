@@ -1,0 +1,53 @@
+<form [formGroup]="cartForm"
+      (ngSubmit)="onSubmit(cartForm)">
+
+  <cart-item-list
+    (onBookDeleted)="bookWasDeleted($event)"
+    [books]="books">
+  </cart-item-list>
+
+  <div class="field">
+    <label for="cardType">Card Type</label>
+    <select name="cardType" id="cardType"
+            [formControl]="cartForm.controls['cardType']">
+      <option *ngFor="let type of cards" [value]="type">{{type}}</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="cardNoInput">Card Number</label>
+    <input type="password"
+           id="cardNoInput"
+           placeholder="Card Number"
+           [formControl]="cartForm.controls['cardNo']">
+
+    <div *ngIf="cartForm.controls['cardNo'].hasError('required') && cartForm.get('cardNo').touched"
+         class="form-error is-visible">
+      Card Number is required
+    </div>
+
+    <div *ngIf="cartForm.hasError('invalidCardNo') && cartForm.get('cardNo').touched"
+         class="form-error is-visible">
+      Card Number is Invalid
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="fullName">Full Name</label>
+    <input type="text"
+           id="fullName"
+           placeholder="Full Name"
+           [formControl]="cartForm.controls['fullName']">
+
+    <div *ngIf="!cartForm.controls['fullName'].valid && cartForm.get('fullName').touched"
+         class="form-error is-visible">
+      Full Name should contain only letters and spaces
+    </div>
+    <div *ngIf="cartForm.controls['fullName'].hasError('required') && cartForm.get('fullName').touched"
+         class="form-error is-visible">
+      Full Name is required
+    </div>
+  </div>
+
+  <button type="submit" class="button alert" [disabled]="!cartForm.valid">Purchase</button>
+</form>
